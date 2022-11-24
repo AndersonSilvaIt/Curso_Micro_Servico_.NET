@@ -7,9 +7,28 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FrontEnd", "FrontEnd", "{D8
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{1E002C90-18F6-4FD3-B4B1-5F706671B7FA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeekShopping.Web", "GeekShopping.Web\GeekShopping.Web.csproj", "{C64FBCA4-14DF-41A7-A0AF-C0E8A5DEFEB2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GeekShopping.Web", "GeekShopping.Web\GeekShopping.Web.csproj", "{C64FBCA4-14DF-41A7-A0AF-C0E8A5DEFEB2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeekShopping.ProductAPI", "GeekShopping.ProductAPI\GeekShopping.ProductAPI.csproj", "{8462372F-3FCB-458E-89D3-B241D4B84399}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GeekShopping.ProductAPI", "GeekShopping.ProductAPI\GeekShopping.ProductAPI.csproj", "{8462372F-3FCB-458E-89D3-B241D4B84399}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "images", "images", "{A6D53792-6A00-4CB9-895C-8EB811C89DC4}"
+	ProjectSection(SolutionItems) = preProject
+		C:\Users\asilv\Downloads\0808+Adicionando+o+Primeiro+Registro+à+Base+de+Dados\ShoppingImages\00_no_image.jpg = C:\Users\asilv\Downloads\0808+Adicionando+o+Primeiro+Registro+à+Base+de+Dados\ShoppingImages\00_no_image.jpg
+		C:\Users\asilv\Downloads\0808+Adicionando+o+Primeiro+Registro+à+Base+de+Dados\ShoppingImages\10_milennium_falcon.jpg = C:\Users\asilv\Downloads\0808+Adicionando+o+Primeiro+Registro+à+Base+de+Dados\ShoppingImages\10_milennium_falcon.jpg
+		C:\Users\asilv\Downloads\0808+Adicionando+o+Primeiro+Registro+à+Base+de+Dados\ShoppingImages\11_mars.jpg = C:\Users\asilv\Downloads\0808+Adicionando+o+Primeiro+Registro+à+Base+de+Dados\ShoppingImages\11_mars.jpg
+		C:\Users\asilv\Downloads\0808+Adicionando+o+Primeiro+Registro+à+Base+de+Dados\ShoppingImages\12_gnu_linux.jpg = C:\Users\asilv\Downloads\0808+Adicionando+o+Primeiro+Registro+à+Base+de+Dados\ShoppingImages\12_gnu_linux.jpg
+		C:\Users\asilv\Downloads\0808+Adicionando+o+Primeiro+Registro+à+Base+de+Dados\ShoppingImages\13_dragon_ball.jpg = C:\Users\asilv\Downloads\0808+Adicionando+o+Primeiro+Registro+à+Base+de+Dados\ShoppingImages\13_dragon_ball.jpg
+		C:\Users\asilv\Downloads\0808+Adicionando+o+Primeiro+Registro+à+Base+de+Dados\ShoppingImages\14_patch_nasa.jpg = C:\Users\asilv\Downloads\0808+Adicionando+o+Primeiro+Registro+à+Base+de+Dados\ShoppingImages\14_patch_nasa.jpg
+		C:\Users\asilv\Downloads\0808+Adicionando+o+Primeiro+Registro+à+Base+de+Dados\ShoppingImages\1_super_mario.jpg = C:\Users\asilv\Downloads\0808+Adicionando+o+Primeiro+Registro+à+Base+de+Dados\ShoppingImages\1_super_mario.jpg
+		C:\Users\asilv\Downloads\0808+Adicionando+o+Primeiro+Registro+à+Base+de+Dados\ShoppingImages\2_no_internet.jpg = C:\Users\asilv\Downloads\0808+Adicionando+o+Primeiro+Registro+à+Base+de+Dados\ShoppingImages\2_no_internet.jpg
+		C:\Users\asilv\Downloads\0808+Adicionando+o+Primeiro+Registro+à+Base+de+Dados\ShoppingImages\3_vader.jpg = C:\Users\asilv\Downloads\0808+Adicionando+o+Primeiro+Registro+à+Base+de+Dados\ShoppingImages\3_vader.jpg
+		C:\Users\asilv\Downloads\0808+Adicionando+o+Primeiro+Registro+à+Base+de+Dados\ShoppingImages\4_storm_tropper.jpg = C:\Users\asilv\Downloads\0808+Adicionando+o+Primeiro+Registro+à+Base+de+Dados\ShoppingImages\4_storm_tropper.jpg
+		C:\Users\asilv\Downloads\0808+Adicionando+o+Primeiro+Registro+à+Base+de+Dados\ShoppingImages\5_100_gamer.jpg = C:\Users\asilv\Downloads\0808+Adicionando+o+Primeiro+Registro+à+Base+de+Dados\ShoppingImages\5_100_gamer.jpg
+		C:\Users\asilv\Downloads\0808+Adicionando+o+Primeiro+Registro+à+Base+de+Dados\ShoppingImages\6_spacex.jpg = C:\Users\asilv\Downloads\0808+Adicionando+o+Primeiro+Registro+à+Base+de+Dados\ShoppingImages\6_spacex.jpg
+		C:\Users\asilv\Downloads\0808+Adicionando+o+Primeiro+Registro+à+Base+de+Dados\ShoppingImages\7_coffee.jpg = C:\Users\asilv\Downloads\0808+Adicionando+o+Primeiro+Registro+à+Base+de+Dados\ShoppingImages\7_coffee.jpg
+		C:\Users\asilv\Downloads\0808+Adicionando+o+Primeiro+Registro+à+Base+de+Dados\ShoppingImages\8_moletom_cobra_kay.jpg = C:\Users\asilv\Downloads\0808+Adicionando+o+Primeiro+Registro+à+Base+de+Dados\ShoppingImages\8_moletom_cobra_kay.jpg
+		C:\Users\asilv\Downloads\0808+Adicionando+o+Primeiro+Registro+à+Base+de+Dados\ShoppingImages\9_neil.jpg = C:\Users\asilv\Downloads\0808+Adicionando+o+Primeiro+Registro+à+Base+de+Dados\ShoppingImages\9_neil.jpg
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

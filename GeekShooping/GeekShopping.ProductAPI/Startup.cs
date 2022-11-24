@@ -1,5 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using GeekShopping.ProductAPI.Model.Context;
+using Microsoft.OpenApi.Models;
+using AutoMapper;
 
 namespace GeekShopping.ProductAPI
 {
@@ -36,7 +38,10 @@ namespace GeekShopping.ProductAPI
         {
             services.AddControllers();
             services.AddEndpointsApiExplorer();
-            services.AddSwaggerGen();
+            services.AddSwaggerGen( c =>
+            {
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "GeekShopping.ProductAPI", Version =  "v1"});
+            });
 
             string connection = Configuration.GetConnectionString("DefaultConnection");
 
