@@ -37,8 +37,13 @@ namespace GeekShopping.ProductAPI.Repository
         {
             Product product = _mapper.Map<Product>(vo);
             _context.Products.Add(product);
-            await _context.SaveChangesAsync();
+            try
+            {
+                await _context.SaveChangesAsync();
+            }catch(Exception ex)
+            {
 
+            }
             return _mapper.Map<ProductVO>(product);
         }
 
