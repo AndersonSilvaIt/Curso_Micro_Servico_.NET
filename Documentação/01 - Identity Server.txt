@@ -1,0 +1,9 @@
+Utilizado o Duende Software para facilitar a criação do Identity Server
+
+instalar globalmente na máquina, usar o powershell
+
+dotnet new --install Duende.IdentityServer.Templates
+
+na pasta do projeto, criar uma outra, no caso, criei a pasta foo
+
+abrir com o gitbash ou power shell e rodar o comando "dotnet new isui"
