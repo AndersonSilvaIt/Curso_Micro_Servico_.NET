@@ -3,13 +3,13 @@ using Microsoft.EntityFrameworkCore;
 
 namespace GeekShopping.IdentityServer.Model.Context
 {
-    public class PGContext : IdentityDbContext<ApplicationUser>
+    public class MySQLContext : IdentityDbContext<ApplicationUser>
     {
-        public PGContext()
+        public MySQLContext()
         {
 
         }
-        public PGContext(DbContextOptions<PGContext> options)
+        public MySQLContext(DbContextOptions<MySQLContext> options)
             : base(options) { }
     }
 }
