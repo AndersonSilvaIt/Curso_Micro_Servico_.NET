@@ -5,7 +5,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace GeekShopping.CartAPI.Migrations
 {
-    public partial class CartMigration : Migration
+    public partial class Cart : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -24,7 +24,7 @@ namespace GeekShopping.CartAPI.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "product",
+                name: "cart_product",
                 columns: table => new
                 {
                     id = table.Column<long>(type: "bigint", nullable: false),
@@ -36,7 +36,7 @@ namespace GeekShopping.CartAPI.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_product", x => x.id);
+                    table.PrimaryKey("PK_cart_product", x => x.id);
                 });
 
             migrationBuilder.CreateTable(
@@ -59,9 +59,9 @@ namespace GeekShopping.CartAPI.Migrations
                         principalColumn: "id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_cart_detail_product_ProductId",
+                        name: "FK_cart_detail_cart_product_ProductId",
                         column: x => x.ProductId,
-                        principalTable: "product",
+                        principalTable: "cart_product",
                         principalColumn: "id",
                         onDelete: ReferentialAction.Cascade);
                 });
@@ -86,7 +86,7 @@ namespace GeekShopping.CartAPI.Migrations
                 name: "cart_header");
 
             migrationBuilder.DropTable(
-                name: "product");
+                name: "cart_product");
         }
     }
 }

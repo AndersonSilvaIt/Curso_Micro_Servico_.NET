@@ -3,8 +3,8 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace GeekShopping.CartAPI.Model
 {
-    [Table("product")]
-    public class Product
+    [Table("cart_product")]
+    public class Cart_Product
     {
         [Key, DatabaseGenerated(DatabaseGeneratedOption.None)]
         [Column("id")]
