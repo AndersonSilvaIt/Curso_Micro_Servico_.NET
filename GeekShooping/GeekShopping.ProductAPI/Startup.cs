@@ -45,7 +45,7 @@ namespace GeekShopping.ProductAPI
 
             string connection = Configuration.GetConnectionString("DefaultConnection");
 
-            services.AddDbContext<PGContext>(options =>
+            services.AddDbContext<MySQLContext>(options =>
             {
                 options.UseNpgsql(connection, builder => builder.EnableRetryOnFailure(5, TimeSpan.FromSeconds(10), null)
                 .CommandTimeout(10));

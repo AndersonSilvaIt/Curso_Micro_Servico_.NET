@@ -11,7 +11,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 string connection = builder.Configuration.GetConnectionString("DefaultConnection");
 
-builder.Services.AddDbContext<PGContext>(options =>
+builder.Services.AddDbContext<MySQLContext>(options =>
 {
     options.UseNpgsql(connection, builder => builder.EnableRetryOnFailure(5, TimeSpan.FromSeconds(10), null)
     .CommandTimeout(10));

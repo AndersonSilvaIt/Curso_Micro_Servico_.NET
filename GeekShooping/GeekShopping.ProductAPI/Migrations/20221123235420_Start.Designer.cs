@@ -10,7 +10,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace GeekShopping.ProductAPI.Migrations
 {
-    [DbContext(typeof(PGContext))]
+    [DbContext(typeof(MySQLContext))]
     [Migration("20221123235420_Start")]
     partial class Start
     {

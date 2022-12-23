@@ -9,8 +9,8 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace GeekShopping.ProductAPI.Migrations
 {
-    [DbContext(typeof(PGContext))]
-    partial class PGContextModelSnapshot : ModelSnapshot
+    [DbContext(typeof(MySQLContext))]
+    partial class MySQLContext : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
         {

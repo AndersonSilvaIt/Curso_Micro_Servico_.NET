@@ -12,6 +12,27 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="Models\CartDetailViewModel.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Update="Models\CartHeaderViewModel.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Update="Models\CartViewModel.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Update="Models\CouponViewModel.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Update="Models\ErrorViewModel.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Update="Models\ProductViewModel.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
     <Content Update="wwwroot\images\favicon.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
