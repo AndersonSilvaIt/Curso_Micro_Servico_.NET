@@ -4,19 +4,14 @@ using GeekShopping.CartAPI.Model.Context;
 using GeekShopping.CartAPI.Repository;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace GeekShopping.CartAPI
 {
@@ -34,7 +29,7 @@ namespace GeekShopping.CartAPI
         {
             string connection = Configuration.GetConnectionString("DefaultConnection");
 
-            services.AddDbContext<PGContext>(options =>
+            services.AddDbContext<MySQLContext>(options =>
             {
                 options.UseNpgsql(connection, builder => builder.EnableRetryOnFailure(5, TimeSpan.FromSeconds(10), null)
                 .CommandTimeout(10));
