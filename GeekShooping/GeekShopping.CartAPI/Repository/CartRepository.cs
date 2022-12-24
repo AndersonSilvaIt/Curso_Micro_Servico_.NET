@@ -71,9 +71,23 @@ namespace GeekShopping.CartAPI.Repository
                 CartHeader = await _context.CartHeaders
                     .FirstOrDefaultAsync(c => c.UserId == userId),
             };
+
+            if (cart.CartHeader == null)
+                cart.CartHeader = new CartHeader();
+
             cart.CartDetails = _context.CartDetails
                 .Where(c => c.CartHeaderId == cart.CartHeader.Id)
                     .Include(c => c.Product);
+            try
+            {
+
+                var cartMap = _mapper.Map<CartVO>(cart);
+            }
+            catch (Exception ex)
+            {
+                string teste = "";
+            }
+
             return _mapper.Map<CartVO>(cart);
         }
 
