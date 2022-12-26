@@ -19,7 +19,10 @@ builder.Services.AddDbContext<MySQLContext>(options =>
 
 var builderopt = new DbContextOptionsBuilder<MySQLContext>();
 
-builder.Services.AddSingleton(new OrderRepository(builderopt.Options));
+var provider = builder.Services.BuildServiceProvider();
+var dbContext = provider.GetRequiredService<MySQLContext>();
+
+builder.Services.AddSingleton(new OrderRepository(dbContext));
 
 builder.Services.AddHostedService<RabbitMQCheckoutConsumer>();
 builder.Services.AddControllers();
@@ -96,5 +99,7 @@ app.UseEndpoints(endpoints =>
 {
     endpoints.MapControllers();
 });
+
+AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
 
 app.Run();

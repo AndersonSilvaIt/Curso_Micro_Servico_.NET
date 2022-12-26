@@ -3,6 +3,7 @@ using System;
 using GeekShopping.OrderAPI.Model.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -11,9 +12,10 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace GeekShopping.OrderAPI.Migrations
 {
     [DbContext(typeof(MySQLContext))]
-    partial class MySQLContextModelSnapshot : ModelSnapshot
+    [Migration("20221226170724_Order")]
+    partial class Order
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -68,6 +70,7 @@ namespace GeekShopping.OrderAPI.Migrations
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<long>("Id"));
 
                     b.Property<string>("CVV")
+                        .IsRequired()
                         .HasColumnType("text")
                         .HasColumnName("cvv");
 
@@ -81,6 +84,7 @@ namespace GeekShopping.OrderAPI.Migrations
                         .HasColumnName("total_itens");
 
                     b.Property<string>("CouponCode")
+                        .IsRequired()
                         .HasColumnType("text")
                         .HasColumnName("coupon_code");
 
@@ -93,10 +97,12 @@ namespace GeekShopping.OrderAPI.Migrations
                         .HasColumnName("discount_amount");
 
                     b.Property<string>("Email")
+                        .IsRequired()
                         .HasColumnType("text")
                         .HasColumnName("email");
 
                     b.Property<string>("ExpiryMonthYear")
+                        .IsRequired()
                         .HasColumnType("text")
                         .HasColumnName("expiry_month_year");
 
@@ -119,6 +125,7 @@ namespace GeekShopping.OrderAPI.Migrations
                         .HasColumnName("payment_status");
 
                     b.Property<string>("Phone")
+                        .IsRequired()
                         .HasColumnType("text")
                         .HasColumnName("phone_number");
 

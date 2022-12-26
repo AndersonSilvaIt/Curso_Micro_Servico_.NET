@@ -82,24 +82,26 @@ builder.Services.AddSwaggerGen(c =>
 
 var app = builder.Build();
 
-    // Configure the HTTP request pipeline.
+// Configure the HTTP request pipeline.
 
-    if (app.Environment.IsDevelopment())
-    {
-        app.UseDeveloperExceptionPage();
-        app.UseSwagger();
-        app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "GeekShopping.ProductAPI v1"));
-    }
+if (app.Environment.IsDevelopment())
+{
+    app.UseDeveloperExceptionPage();
+    app.UseSwagger();
+    app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "GeekShopping.ProductAPI v1"));
+}
 
-    app.UseHttpsRedirection();
+app.UseHttpsRedirection();
 
-    app.UseRouting();
-    app.UseAuthentication();
-    app.UseAuthorization();
+app.UseRouting();
+app.UseAuthentication();
+app.UseAuthorization();
 
-    app.UseEndpoints(endpoints =>
-    {
-        endpoints.MapControllers();
-    });
+app.UseEndpoints(endpoints =>
+{
+    endpoints.MapControllers();
+});
 
-    app.Run();
+
+AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
+app.Run();

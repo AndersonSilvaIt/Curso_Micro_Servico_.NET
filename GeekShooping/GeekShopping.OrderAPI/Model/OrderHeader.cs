@@ -1,6 +1,4 @@
 ﻿using GeekShopping.OrderAPI.Model.Base;
-using System.Collections.Generic;
-using System;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace GeekShopping.OrderAPI.Model
@@ -12,7 +10,7 @@ namespace GeekShopping.OrderAPI.Model
         public string UserId { get; set; }
 
         [Column("coupon_code")]
-        public string CouponCode { get; set; }
+        public string? CouponCode { get; set; }
 
         [Column("purchase_amount")]
         public decimal PurchaseAmount { get; set; }
@@ -33,19 +31,19 @@ namespace GeekShopping.OrderAPI.Model
         public DateTime OrderTime { get; set; }
 
         [Column("phone_number")]
-        public string Phone { get; set; }
+        public string? Phone { get; set; }
 
         [Column("email")]
-        public string Email { get; set; }
+        public string? Email { get; set; }
 
         [Column("card_number")]
         public string CardNumber { get; set; }
 
         [Column("cvv")]
-        public string CVV { get; set; }
+        public string? CVV { get; set; }
 
         [Column("expiry_month_year")]
-        public string ExpiryMonthYear { get; set; }
+        public string? ExpiryMonthYear { get; set; }
 
         [Column("total_itens")]
         public int CartTotalItens { get; set; }

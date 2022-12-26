@@ -74,6 +74,9 @@ namespace GeekShopping.IdentityServer
             {
                 app.UseExceptionHandler("/Home/Error");
             }
+
+            //AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
+
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 

@@ -12,8 +12,8 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace GeekShopping.OrderAPI.Migrations
 {
     [DbContext(typeof(MySQLContext))]
-    [Migration("20221226161110_Order")]
-    partial class Order
+    [Migration("20221226171633_Order2")]
+    partial class Order2
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -84,7 +84,6 @@ namespace GeekShopping.OrderAPI.Migrations
                         .HasColumnName("total_itens");
 
                     b.Property<string>("CouponCode")
-                        .IsRequired()
                         .HasColumnType("text")
                         .HasColumnName("coupon_code");
 
