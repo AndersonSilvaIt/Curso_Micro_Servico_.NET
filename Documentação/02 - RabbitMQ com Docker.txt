@@ -1,0 +1,15 @@
+instalar o docker para o windows
+
+https://www.youtube.com/watch?v=8eGOtu_SZKg&list=PL18bbNo7xuh84zAeNjNejyzd1GASt8Q9x
+
+Curso de Docker
+
+
+para subir um container com RabbitMQ com a tela de gerenciamento:
+
+
+executar com powershell (o comando managment, é a interface gráfica)
+docker run -d --hostname my-rabbit --name some-rabbit -p 15672:15672 rabbitmq:3-management
+
+
+docker run -d --hostname my-rabbit --name some-rabbit -p 5672:5672 -p 15672:15672 rabbitmq:3-management
