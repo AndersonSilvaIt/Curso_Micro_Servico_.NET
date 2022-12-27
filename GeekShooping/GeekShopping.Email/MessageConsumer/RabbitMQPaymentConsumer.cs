@@ -1,13 +1,9 @@
 ﻿using GeekShopping.Email.Messages;
 using GeekShopping.Email.Repository;
-using Microsoft.Extensions.Hosting;
 using RabbitMQ.Client;
 using RabbitMQ.Client.Events;
-using System;
 using System.Text;
 using System.Text.Json;
-using System.Threading;
-using System.Threading.Tasks;
 
 namespace GeekShopping.Email.MessageConsumer
 {
@@ -52,7 +48,7 @@ namespace GeekShopping.Email.MessageConsumer
         }
 
         private async Task ProcessLogs(UpdatePaymentResultMessage message)
-        {         
+        {
             try
             {
                 await _repository.LogEmail(message);

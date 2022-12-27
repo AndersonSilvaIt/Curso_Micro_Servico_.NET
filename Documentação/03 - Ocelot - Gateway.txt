@@ -1,0 +1,8 @@
+Ocelot nada mais que é o Middleware, que recebe a requisição do Browser e envia para a API responsável (Carrinho, pagamento, produto e etc ...)
+
+
+Upstream, para qual rota irá redirecionar ...
+
+
+DownStream, para qual rota irá retornas os dados ...
+

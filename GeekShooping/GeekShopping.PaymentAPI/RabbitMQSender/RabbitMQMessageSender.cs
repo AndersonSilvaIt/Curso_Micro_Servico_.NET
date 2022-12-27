@@ -1,7 +1,6 @@
 ﻿using GeekShopping.MessageBus;
 using GeekShopping.PaymentAPI.Messages;
 using RabbitMQ.Client;
-using System;
 using System.Text;
 using System.Text.Json;
 
@@ -27,7 +26,7 @@ namespace GeekShopping.PaymentAPI.RabbitMQSender
 
         public void SendMessage(BaseMessage message)
         {
-            if(ConnectionExists())
+            if (ConnectionExists())
             {
                 using var channel = _connection.CreateModel();
 
@@ -77,8 +76,8 @@ namespace GeekShopping.PaymentAPI.RabbitMQSender
         }
 
         private bool ConnectionExists()
-        {   
-            if(_connection != null) return true;
+        {
+            if (_connection != null) return true;
             CreateConnection();
             return _connection != null;
         }
